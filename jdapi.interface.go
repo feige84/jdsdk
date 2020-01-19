@@ -215,7 +215,6 @@ func (client *ApiReq) NormalGetPromotionGoodsInfoMultiple(skuIds string) (map[in
 		return nil, err
 	}
 	if apiErrInfo := client.CheckApiErr(resp); apiErrInfo != nil {
-		fmt.Println("xxxxxxxxxx")
 		return nil, apiErrInfo
 	}
 	respCode := resp.Get("code").Int()
