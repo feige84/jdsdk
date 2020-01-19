@@ -219,7 +219,7 @@ func (client *ApiReq) NormalGetPromotionGoodsInfoMultiple(skuIds string) (map[in
 		return nil, apiErrInfo
 	}
 	respCode := resp.Get("code").Int()
-	fmt.Println("respCode:", respCode)
+	//fmt.Println("respCode:", respCode)
 	promotionGoodsResp := resp.Get("data")
 	if respCode == 200 && promotionGoodsResp.Exists() {
 		promotionGoodsList := make(map[int64]*PromotionGoodsResp)
